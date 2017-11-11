@@ -1,0 +1,103 @@
+/*
+Theme Name: $sitio
+Author: Carlos Isaias Ruiz
+Author URL: http://zimoo354.mx
+Description: The 2017 theme for $sitio is a fully responsive theme that looks great on any device.
+Version: 1.0
+License: Propietary Software rights
+Text Domain: $sitio
+*/
+/* Variables */
+/* Variables */
+/* Mixins */
+/* Mixins */
+/* General */
+section, .section-div {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  background-size: cover;
+  background-position: 50% 50%; }
+
+.pad-und-lg {
+  padding: 100px 0 100px 0; }
+
+.pad-und-md {
+  padding: 70px 0 70px 0; }
+
+.pad-und-sm {
+  padding: 40px 0 40px 0; }
+
+.pad-und-xs {
+  padding: 20px 0 20px 0; }
+
+.display-none {
+  display: none; }
+
+/* General */
+/* Homepage */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; }
+  header a {
+    color: white; }
+
+#hero {
+  background-size: cover;
+  background-position: center;
+  background-image: url("img/delorean.jpg");
+  height: 100vh; }
+  #hero h1 {
+    margin-top: 30vh;
+    color: #f89755; }
+  #hero h4 {
+    color: white; }
+  #hero h1, #hero h4 {
+    text-align: center;
+    text-shadow: 0 0 5px white; }
+
+#gallery .column {
+  background-size: cover;
+  background-position: center;
+  background-image: url("");
+  position: relative;
+  height: 320px;
+  border: solid 10px white; }
+  @media screen and (max-width: 768px) {
+    #gallery .column {
+      height: 180px; } }
+  #gallery .column:nth-child(1) {
+    background-size: cover;
+    background-position: center;
+    background-image: url("img/d1.jpg"); }
+  #gallery .column:nth-child(2) {
+    background-size: cover;
+    background-position: center;
+    background-image: url("img/d2.jpg"); }
+  #gallery .column:nth-child(3) {
+    background-size: cover;
+    background-position: center;
+    background-image: url("img/d3.jpg"); }
+  #gallery .column .claim {
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 10%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+
+#title-2 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("img/bg1.jpg"); }
+  #title-2 h1 {
+    color: white; }
+
+/* Homepage */
+
+/*# sourceMappingURL=style.css.map */

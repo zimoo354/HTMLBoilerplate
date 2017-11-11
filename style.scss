@@ -1,0 +1,142 @@
+/*
+Theme Name: $sitio
+Author: Carlos Isaias Ruiz
+Author URL: http://zimoo354.mx
+Description: The 2017 theme for $sitio is a fully responsive theme that looks great on any device.
+Version: 1.0
+License: Propietary Software rights
+Text Domain: $sitio
+*/
+
+/* Variables */
+
+$maincolor: #f89755;
+
+$mainfont: 'Montserrat';
+$secfont: 'Quattrocento Sans';
+
+$break_small: 768px;
+
+/* Variables */
+
+/* Mixins */
+
+@mixin bg($img) {
+	background-size: cover;
+	background-position: center;
+	background-image: url($img);
+}
+
+/* Mixins */
+
+/* General */
+
+section,.section-div{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: block;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.pad-und-lg{
+	padding: 100px 0 100px 0;
+}
+
+.pad-und-md{
+	padding: 70px 0 70px 0;
+}
+
+.pad-und-sm{
+	padding: 40px 0 40px 0;
+}
+
+.pad-und-xs{
+	padding: 20px 0 20px 0;
+}
+
+.display-none {
+	display: none; 
+}
+
+/* General */
+
+/* Homepage */
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+
+	a {
+		color: white;
+	}
+
+}
+
+#hero {
+	@include bg("img/delorean.jpg");
+	height: 100vh;
+
+	h1 {
+		margin-top: 30vh;
+		color: $maincolor;
+	}
+
+	h4 {
+		color: white;
+	}
+
+	h1, h4 {
+		text-align: center;
+		text-shadow: 0 0 5px white;
+	}
+}
+
+#gallery {
+	.column {
+		@include bg("");
+		position: relative;
+		height: 320px;
+		border: solid 10px white;
+
+		@media screen and (max-width: $break_small) {
+			height: 180px;
+		}
+		&:nth-child(1) {
+			@include bg('img/d1.jpg')
+		}
+		&:nth-child(2) {
+			@include bg('img/d2.jpg')
+		}
+		&:nth-child(3) {
+			@include bg('img/d3.jpg')
+		}
+
+		.claim {
+			background-color: rgba(255,255,255,0.6);
+			position: absolute;
+			top: 10%;
+			height: 80%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+
+	}
+}
+
+#title-2 {
+	@include bg('img/bg1.jpg');
+
+	h1 {
+		color: white;
+	}
+}
+
+
+
+/* Homepage */
