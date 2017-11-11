@@ -1,6 +1,16 @@
 $(document).ready(function(){
 	//$(document).foundation();
 	$('.menu-mobile-trigger').sidr();
+
+
+	$('[project]').each(function(i,el){
+		var e = $(el)
+		var pos = e.position() // top, left
+		e.attr('data-left', pos.left);
+		e.attr('data-top', pos.top);
+		e.attr('data-height', e.height());
+		e.attr('data-width', e.width());
+	});
 });
 
 function sendContacto(){
@@ -42,3 +52,41 @@ function send() {
 		console.log(data);
 	}
 }
+
+$('[project]').on('click', function(){
+	var e = $(this);
+		prevPos = {
+			left: e.data('left'),
+			top: e.data('top'),
+			height: e.data('height'),
+			width: e.data('width'),
+		};
+		var pos = e.position();
+	if (e.hasClass('active')) {
+
+		e.css('left', Math.round(prevPos.left));
+		e.css('top', Math.round(prevPos.top));
+		e.css('width', prevPos.width);
+			setTimeout(function(){
+			e.removeAttr('style');
+		},301);
+		e.find('p').fadeOut(300);
+		e.toggleClass('active');
+
+	} else {
+
+		e.css('left', pos.left);
+		e.css('top', pos.top);
+		e.css('position', 'absolute')
+
+		setTimeout(function(){
+			e.css('left', 0);
+			e.css('top', 0);
+		})
+		e.find('p').fadeIn(300);
+
+		e.toggleClass('active');
+	}
+})
+
+
